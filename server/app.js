@@ -1,6 +1,4 @@
 const colors = require('colors');
-const path = require('path');
-const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const socketCookieParser = require('./utils/socketCookieParser');
@@ -26,7 +24,11 @@ const { json, urlencoded } = express;
 require('dotenv').config();
 connectDB();
 const app = express();
-const server = http.createServer(app);
+
+const PORT = process.env.PORT || 3001;
+const server = app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 const io = socketio(server, {
   cors: {
