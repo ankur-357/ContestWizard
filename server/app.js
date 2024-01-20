@@ -118,6 +118,10 @@ if (process.env.NODE_ENV === 'production') {
     res.send('API is running');
   });
 }
+}//SampleRoute(or)SampleEndPoint
+app.get("/", function (request, response) {
+  response.send("🙋‍♂️, 🌏 🎊✨🤩");
+});
 
 app.use(notFound);
 app.use(errorHandler);
