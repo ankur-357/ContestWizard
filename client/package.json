@@ -39,7 +39,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://react-contest.onrender.com",
   "browserslist": {
     "production": [
       ">0.2%",
