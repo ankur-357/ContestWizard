@@ -2,8 +2,8 @@ const AWS = require('aws-sdk');
 const asyncHandler = require('express-async-handler');
 
 AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY,
-  secretAccessKey: process.env.AWS_SECRET_KEY,
+  accessKeyId: process.env.AWS_IACCESS_KEY,
+  secretAccessKey: process.env.AWS_ISECRET_KEY,
   region: process.env.AWS_BUCKET_REGION,
 });
 
