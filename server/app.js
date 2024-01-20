@@ -1,4 +1,5 @@
 const colors = require('colors');
+const path = require('path');
 const express = require('express');
 const socketio = require('socket.io');
 const socketCookieParser = require('./utils/socketCookieParser');
