@@ -69,11 +69,11 @@ const NavBar = (): JSX.Element => {
             )}
             <Box px={6} flexWrap="nowrap">
               {loggedInUser ? (
-                <CustomButton linkTo="https://react-contest.onrender.com/new-contest" btnText="CREATE CONTEST" />
+                <CustomButton linkTo="/new-contest" btnText="CREATE CONTEST" />
               ) : path === '/login' ? (
-                <CustomButton linkTo="https://react-contest.onrender.com/signup" btnText="SIGNUP" />
+                <CustomButton linkTo="/signup" btnText="SIGNUP" />
               ) : (
-                <CustomButton linkTo="https://react-contest.onrender.com/login" btnText="SIGN IN" />
+                <CustomButton linkTo="/login" btnText="SIGN IN" />
               )}
             </Box>
             {loggedInUser ? (
