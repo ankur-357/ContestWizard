@@ -12,7 +12,7 @@ const PaymentDetails: FC = (): JSX.Element => {
   const [paymentMethods, setPaymentMethods] = useState<IPaymentMethod[]>();
   useEffect(() => {
     const getPaymentMethods = async () => {
-      const response = await fetch('/payments/');
+      const response = await fetch('https://react-contest.onrender.com/payments/');
       if (response.ok) {
         const data = await response.json();
         setPaymentMethods(data as IPaymentMethod[]);
