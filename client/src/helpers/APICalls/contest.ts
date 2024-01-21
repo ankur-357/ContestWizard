@@ -15,7 +15,7 @@ export async function createContestAPI(
     credentials: 'include',
   };
 
-  return await fetch(`http://react-contest.onrender.com/contest`, ContestfetchOptions)
+  return await fetch(`https://react-contest.onrender.com/contest`, ContestfetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -31,7 +31,7 @@ export default async function contestImgSubmitAPI(id: string, data: any): Promis
       data,
     }),
   };
-  return await fetch(`http://react-contest.onrender.com/contest/${id}/submission`, S3FetchOptions)
+  return await fetch(`https://react-contest.onrender.com/contest/${id}/submission`, S3FetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
@@ -50,7 +50,7 @@ export async function getAllContests(
     credentials: 'include',
   };
   return await fetch(
-    `http://react-contest.onrender.com/contest/all/contests?search=${search}&title=${title}&startTime=${startTime}&endTime=${endTime}`,
+    `https://react-contest.onrender.com/contest/all/contests?search=${search}&title=${title}&startTime=${startTime}&endTime=${endTime}`,
     ContestfetchOptions,
   )
     .then((res) => res.json())
@@ -65,7 +65,7 @@ export const getUserContests = async (): Promise<ContestAPIResponse> => {
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
   };
-  return await fetch(`http://react-contest.onrender.com/contest/user-contests`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/contest/user-contests`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
@@ -79,7 +79,7 @@ export async function selectWinner(contestId: string, submissionId: string): Pro
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ submissionId }),
   };
-  return await fetch(`http://react-contest.onrender.com/contest/${contestId}/winner`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/contest/${contestId}/winner`, fetchOptions)
     .then((res) => res.json())
     .catch((error) => ({ error }));
 }
@@ -89,7 +89,7 @@ export const getContestsByUsername = async (username: string): Promise<ContestAP
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`http://react-contest.onrender.com/users/${username}/contests`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/users/${username}/contests`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
