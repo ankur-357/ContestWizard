@@ -49,7 +49,7 @@ const AuthMenu = (): JSX.Element => {
         }}
         getContentAnchorEl={null}
       >
-        <MenuItem component={Link} to={'/profile'}>
+        <MenuItem component={Link} to={'https://react-contest.onrender.com/profile'}>
           Settings
         </MenuItem>
         <MenuItem onClick={handleLogout}>Logout</MenuItem>
