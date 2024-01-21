@@ -6,7 +6,7 @@ export const fetchConversations = async (): Promise<MessagingAPIResponse> => {
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`/conversation/all`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/conversation/all`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -18,7 +18,7 @@ export const fetchMessages = async (conversationId: string): Promise<MessagingAP
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`/conversation/${conversationId}/messages`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/conversation/${conversationId}/messages`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -32,7 +32,7 @@ export const createConversation = async (to: string): Promise<MessagingAPIRespon
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ to }),
   };
-  return await fetch(`/conversation/new-conversation`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/conversation/new-conversation`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -46,7 +46,7 @@ export const addMessage = async (conversationId: string, message: string): Promi
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ conversationId, message }),
   };
-  return await fetch(`/conversation/add-message`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/conversation/add-message`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
