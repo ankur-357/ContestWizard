@@ -8,7 +8,7 @@ export default async function chargeCard(contestId: string, cardId: string): Pro
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ contestId, cardId }),
   };
-  return await fetch(`http://react-contest.onrender.com/payments/pay`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/payments/pay`, fetchOptions)
     .then((res) => res.json())
     .catch((error) => ({ error }));
 }
