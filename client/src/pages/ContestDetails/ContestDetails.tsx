@@ -39,7 +39,7 @@ export default function ContestDetails({ match }: RouteComponentProps): JSX.Elem
 
   if (loggedInUser === undefined) return <CircularProgress />;
   if (!loggedInUser) {
-    history.push('https://react-contest.onrender.com/login');
+    history.push('/login');
     // loading for a split seconds until history.push works
     return <CircularProgress />;
   }
@@ -50,14 +50,14 @@ export default function ContestDetails({ match }: RouteComponentProps): JSX.Elem
         updateSnackBarMessage(response.error);
         if (response.error === 'A winner for the contest has already been selected.') {
           setTimeout(function () {
-            history.push(`https://react-contest.onrender.com/contest-details/${contestId}/payment`);
+            history.push(`/contest-details/${contestId}/payment`);
             return <CircularProgress />;
           }, 1000);
         }
       } else {
         updateSnackBarMessage('Winner selected!');
         setTimeout(function () {
-          history.push(`https://react-contest.onrender.com/contest-details/${contestId}/payment`);
+          history.push(`/contest-details/${contestId}/payment`);
           return <CircularProgress />;
         }, 1000);
       }
