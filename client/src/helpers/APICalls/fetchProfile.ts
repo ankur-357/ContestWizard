@@ -6,7 +6,7 @@ export async function fetchProfile(username: string): Promise<User> {
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`http://react-contest.onrender.com/users/${username}`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/users/${username}`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
