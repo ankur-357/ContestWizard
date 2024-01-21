@@ -34,12 +34,12 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build"
+    "build": "react-scripts --openssl-legacy-provider build",
+    "proxy": "https://react-contest.onrender.com"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "https://react-contest.onrender.com",
   "browserslist": {
     "production": [
       ">0.2%",
