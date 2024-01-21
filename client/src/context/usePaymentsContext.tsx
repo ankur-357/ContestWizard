@@ -17,7 +17,7 @@ export const PaymentMethodsProvider: FunctionComponent = ({ children }): JSX.Ele
 
   useEffect(() => {
     const getPaymentMethods = async () => {
-      const response = await fetch('/payments/');
+      const response = await fetch('https://react-contest.onrender.com/payments/');
       if (response.ok) {
         const data = await response.json();
         setPaymentMethods(data as IPaymentMethod[]);
