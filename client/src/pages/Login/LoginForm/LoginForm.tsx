@@ -93,7 +93,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
           />
           <Box textAlign="center">
             <Grid item xs>
-              <Link component={RouterLink} to="https://react-contest.onrender.com/forget-password" variant="body2">
+              <Link component={RouterLink} to="/forget-password" variant="body2">
                 Forgot password?
               </Link>
             </Grid>
