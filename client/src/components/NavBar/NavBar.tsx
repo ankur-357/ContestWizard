@@ -38,14 +38,14 @@ const NavBar = (): JSX.Element => {
         <div style={{ width: '100%' }}>
           <Box display="flex" flexWrap="nowrap" p={1} m={1} alignItems="center" bgcolor="transparent">
             <Box p={1} flexGrow={1}>
-              <Link component={RouterLink} to="/">
+              <Link component={RouterLink} to="https://react-contest.onrender.com/">
                 <img width="170px" src={Logo} alt="Tattoo Art logo" />
               </Link>
             </Box>
             {loggedInUser ? (
               <>
                 <Box p={0}>
-                  <Link component={RouterLink} variant="subtitle1" className={classes.link} to="/discovery">
+                  <Link component={RouterLink} variant="subtitle1" className={classes.link} to="https://react-contest.onrender.com/discovery">
                     Discover
                   </Link>
                 </Box>
@@ -69,11 +69,11 @@ const NavBar = (): JSX.Element => {
             )}
             <Box px={6} flexWrap="nowrap">
               {loggedInUser ? (
-                <CustomButton linkTo="/new-contest" btnText="CREATE CONTEST" />
+                <CustomButton linkTo="https://react-contest.onrender.com/new-contest" btnText="CREATE CONTEST" />
               ) : path === '/login' ? (
-                <CustomButton linkTo="/signup" btnText="SIGNUP" />
+                <CustomButton linkTo="https://react-contest.onrender.com/signup" btnText="SIGNUP" />
               ) : (
-                <CustomButton linkTo="/login" btnText="SIGN IN" />
+                <CustomButton linkTo="https://react-contest.onrender.com/login" btnText="SIGN IN" />
               )}
             </Box>
             {loggedInUser ? (
