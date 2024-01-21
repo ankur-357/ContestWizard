@@ -33,7 +33,7 @@ const ContestItem: FC<Props> = ({
     new Date(deadline).toLocaleTimeString();
   return (
     <Grid container className={classes.contestItemContainer}>
-      <Grid item component={Link} to={`/contest-details/${id}`}>
+      <Grid item component={Link} to={`https://react-contest.onrender.com/contest-details/${id}`}>
         <ImageList cols={1}>
           <ImageListItem key={1} classes={{ item: classes.item }}>
             <img src={imgSrc} alt={headline} className={classes.contestImg} />
