@@ -38,7 +38,7 @@ const NavBar = (): JSX.Element => {
         <div style={{ width: '100%' }}>
           <Box display="flex" flexWrap="nowrap" p={1} m={1} alignItems="center" bgcolor="transparent">
             <Box p={1} flexGrow={1}>
-              <Link component={RouterLink} to="https://react-contest.onrender.com/">
+              <Link component={RouterLink} to="/">
                 <img width="170px" src={Logo} alt="Tattoo Art logo" />
               </Link>
             </Box>
