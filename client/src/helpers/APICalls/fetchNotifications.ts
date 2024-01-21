@@ -6,7 +6,7 @@ export async function fetchNotifications(): Promise<Notification[]> {
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`/notifications`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/notifications`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
