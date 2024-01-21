@@ -8,7 +8,7 @@ const updateProfilePhoto = async (imageType: string, url: string): Promise<AuthA
     body: JSON.stringify({ imageType, url }),
     credentials: 'include',
   };
-  return await fetch(`/users/profile-photo/`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/users/profile-photo/`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
