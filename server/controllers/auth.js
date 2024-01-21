@@ -34,10 +34,13 @@ exports.registerUser = asyncHandler(async (req, res, next) => {
     const token = generateToken(user._id);
     const secondsInWeek = 604800;
 
-    res.cookie('token', token, {
-      httpOnly: true,
-      maxAge: secondsInWeek * 1000,
-    });
+res.cookie('token', token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: 'None', // Add the SameSite attribute
+  maxAge: secondsInWeek * 1000,
+});
+
 
     res.status(201).json({
       success: {
@@ -67,10 +70,13 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
     const token = generateToken(user._id);
     const secondsInWeek = 604800;
 
-    res.cookie('token', token, {
-      httpOnly: true,
-      maxAge: secondsInWeek * 1000,
-    });
+res.cookie('token', token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: 'None', // Add the SameSite attribute
+  maxAge: secondsInWeek * 1000,
+});
+
 
     res.status(200).json({
       success: {
