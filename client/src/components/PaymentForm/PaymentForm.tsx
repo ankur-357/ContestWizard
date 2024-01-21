@@ -57,7 +57,7 @@ const PaymentForm: FC = (): JSX.Element => {
       return;
     }
 
-    const response = await fetch('/payments/secret');
+    const response = await fetch('https://react-contest.onrender.com/payments/secret');
     const { client_secret: clientSecret } = await response.json();
     const result = await stripe.confirmCardSetup(clientSecret, {
       payment_method: {
