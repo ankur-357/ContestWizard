@@ -44,7 +44,7 @@ const Profile = ({ match }: RouteComponentProps): JSX.Element => {
     if (profile) {
       const conId = await newConversation(profile?.email);
       if (conId !== undefined) {
-        history.push(`/messages/${conId}`);
+        history.push(`https://react-contest.onrender.com/messages/${conId}`);
       }
     }
   };
@@ -81,7 +81,7 @@ const Profile = ({ match }: RouteComponentProps): JSX.Element => {
             Message
           </Button>
         ) : (
-          <Button component={Link} to={`/profile`} variant="outlined" color="primary" className={classes.button}>
+          <Button component={Link} to={`https://react-contest.onrender.com/profile`} variant="outlined" color="primary" className={classes.button}>
             Edit Profile
           </Button>
         )}
