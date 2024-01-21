@@ -15,7 +15,7 @@ export async function createContestAPI(
     credentials: 'include',
   };
 
-  return await fetch(`/contest`, ContestfetchOptions)
+  return await fetch(`http://react-contest.onrender.com/contest`, ContestfetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -31,7 +31,7 @@ export default async function contestImgSubmitAPI(id: string, data: any): Promis
       data,
     }),
   };
-  return await fetch(`/contest/${id}/submission`, S3FetchOptions)
+  return await fetch(`http://react-contest.onrender.com/contest/${id}/submission`, S3FetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
