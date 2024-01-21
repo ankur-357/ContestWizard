@@ -6,7 +6,7 @@ const loginWithCookies = async (): Promise<AuthApiData> => {
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`http://react-contest.onrender.com/auth/user`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/auth/user`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
