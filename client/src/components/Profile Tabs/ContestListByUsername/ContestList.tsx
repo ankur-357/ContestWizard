@@ -23,7 +23,7 @@ export function ContestList({ contests }: Props): JSX.Element {
           <ListItem button key={contest._id}>
             <Grid
               component={Link}
-              to={`/contest-details/${contest._id}`}
+              to={`https://react-contest.onrender.com/contest-details/${contest._id}`}
               container={true}
               alignItems="center"
               justify="center"
