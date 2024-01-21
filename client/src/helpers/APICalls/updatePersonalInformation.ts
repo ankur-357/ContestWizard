@@ -13,7 +13,7 @@ const updatePersonalInformation = async (
     body: JSON.stringify({ email, headline, bio, location }),
     credentials: 'include',
   };
-  return await fetch(`/users/info/`, fetchOptions)
+  return await fetch(`http://react-contest.onrender.com/users/info/`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
