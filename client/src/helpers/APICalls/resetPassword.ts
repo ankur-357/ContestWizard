@@ -9,7 +9,7 @@ export default async function sendResetEmailAPI(email: string): Promise<any> {
       email,
     }),
   };
-  return await fetch(`http://react-contest.onrender.com/email/send-email/reset-password`, emailFetchOptions)
+  return await fetch(`https://react-contest.onrender.com/email/send-email/reset-password`, emailFetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
@@ -26,7 +26,7 @@ export async function resetPasswordAPI(token: string, password: string): Promise
       password,
     }),
   };
-  return await fetch(`http://react-contest.onrender.com/auth/reset-password`, emailFetchOptions)
+  return await fetch(`https://react-contest.onrender.com/auth/reset-password`, emailFetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
