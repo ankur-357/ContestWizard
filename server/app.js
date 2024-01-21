@@ -30,10 +30,13 @@ const PORT = process.env.PORT || 3001;
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
+app.use(cors({
+  origin: "http://contest-wizard-zl6r.vercel.app",
+  credentials: true
+}));
 const io = socketio(server, {
   cors: {
-    origin: '*',
+    origin: 'http://contest-wizard-zl6r.vercel.app',
     credentials: true,
   },
 });
