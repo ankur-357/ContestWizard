@@ -1,6 +1,7 @@
 const AWS = require('aws-sdk');
 const asyncHandler = require('express-async-handler');
-
+const dotenv = require("dotenv");
+dotenv.config();
 AWS.config.update({
   accessKeyId: process.env.AWS_IACCESS_KEY,
   secretAccessKey: process.env.AWS_ISECRET_KEY,
