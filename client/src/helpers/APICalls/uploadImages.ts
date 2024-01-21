@@ -6,7 +6,7 @@ export default async function uploadImagesAPI(data: FormData): Promise<S3UploadA
     method: 'POST',
     body: data,
   };
-  return await fetch(`http://react-contest.onrender.com/upload/uploadimage`, S3FetchOptions)
+  return await fetch(`https://react-contest.onrender.com/upload/uploadimage`, S3FetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: 'Unable to connect to server. Please try again',
