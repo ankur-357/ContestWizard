@@ -7,7 +7,7 @@ export async function getAllSubmissions(id: string): Promise<any> {
     credentials: 'include',
   };
 
-  return await fetch(`http://react-contest.onrender.com/submission/${id}`, SubmissionsFetchOptions)
+  return await fetch(`https://react-contest.onrender.com/submission/${id}`, SubmissionsFetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
