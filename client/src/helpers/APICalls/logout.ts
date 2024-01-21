@@ -6,7 +6,7 @@ const logout = async (): Promise<AuthApiData> => {
     method: 'GET',
     credentials: 'include',
   };
-  return await fetch(`http://react-contest.onrender.com/auth/logout`, fetchOptions)
+  return await fetch(`https://react-contest.onrender.com/auth/logout`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
