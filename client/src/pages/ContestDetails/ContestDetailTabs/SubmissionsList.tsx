@@ -40,7 +40,7 @@ export function SubmissionsGrid({ submissionList, setWinner }: SubmissionListPro
               className={classes.radio}
             />
 
-            <Link to={`https://react-contest.onrender.com/users/${submission.name}`} className={classes.caption}>
+            <Link to={`/users/${submission.name}`} className={classes.caption}>
               <ImageListItemBar title={'By @' + submission.name} />
             </Link>
           </ImageListItem>
